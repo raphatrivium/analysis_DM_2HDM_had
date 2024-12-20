@@ -1,14 +1,10 @@
 
 
-cd /afs/cern.ch/work/r/ragomesd/DM_Project/HEPHero/tools/ ; python checker.py -s Test -p 0_22 
+cd /afs/cern.ch/work/r/ragomesd/DM_Project/HEPHero/tools/ ; python checker.py -s Test -p 0_22 ; cd -
+
+cd /afs/cern.ch/work/r/ragomesd/DM_Project/HEPHero/tools/ ; python grouper.py -s Test -p 0_22 ; cd -
+
+cd /eos/user/r/ragomesd/HEP_Project/output/AP_bbhZDM_Had_R3/Test ; rm datasets.tar ;  tar -cf datasets.tar datasets/ ; cd -
 
 
-cd /afs/cern.ch/work/r/ragomesd/DM_Project/HEPHero/tools/ ; python grouper.py -s Test -p 0_22
-
-
-
-cd /eos/user/r/ragomesd/HEP_Project/output/AP_bbhZDM_Had_R3/Test ; tar -cf datasets.tar datasets/
-
-
-
-scp -r ragomesd@lxplus.cern.ch:/eos/user/r/ragomesd/HEP_Project/output/AP_bbhZDM_Had_R3/Test/datasets.tar AP_bbhZDM_Had_R3/Test/ ; cd AP_bbhZDM_Had_R3/Test/ ; rm -rf datasets/ ; tar -xf datasets.tar ; cd ../../
+rm -rf /home/raphael/Desktop/analysis_DM_2HDM_had/AP_bbhZDM_Had_R3/Test/datasets/ /home/raphael/Desktop/analysis_DM_2HDM_had/AP_bbhZDM_Had_R3/Test/datasets.tar ; scp -r ragomesd@lxplus.cern.ch:/eos/user/r/ragomesd/HEP_Project/output/AP_bbhZDM_Had_R3/Test/datasets.tar AP_bbhZDM_Had_R3/Test/ ; cd AP_bbhZDM_Had_R3/Test/ ; rm -rf datasets/ ; tar -xf datasets.tar ; cd ../../

@@ -50,7 +50,7 @@ python runSelection.py -j -2 --resubmit
 ---Resubmit your jobs  ------------
 ------------------------------------
 ./submit_jobs.sh flavour N --resubmit
-./submit_jobs.sh workday 1 --resubmit
+./submit_jobs.sh workday 2 --resubmit
 
 ------------------------------------
 --- Change scheduler   ------------
